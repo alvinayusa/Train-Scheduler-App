@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Train Scheduler Application</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Train Scheduler Application</h1>
+            <hr class="my-4">
+            <p>Local Time: </p>
+        </div>
+        <!-- END of Jumbotron | START of 2 column section-->
+
+        <div class="row">
+            <!-- START of column 1 -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header">
+                        Train Schedule
+                    </div>
+                    <div class="card-body">
+                        <!-- START of table for Train Schedule -->
+                        <table class="table table-hover">
+                            <!-- START of column headers for the table -->
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Number</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <!-- END of column headers for the table -->
+
+                            <!-- START of dynamic train table: to be populated dynamically from the table and javascript -->
+                            <tbody id="trainTable">
+                                <tr>
+                                    <th scope="row">123</th>
+                                    <td>Los Angeles</td>
+                                    <td>25</td>
+                                    <td>05:35 AM</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                            <!-- END of dynamic train table -->
+                        </table>
+                        <!-- END of table for Train Schedule -->
+                    </div>
+                    <!-- END of first card header section -->
+                </div>
+            </div>
+            <!-- END of column 1 -->
+
+            <!-- START of column 2 -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        Add a New Train
+                    </div>
+                    <div class="card-body">
+                        <!-- START of Form Fill Out -->
+                        <form>
+                            <div class="form-group">
+                                <label for="train">Train Number</label>
+                                <input type="number" class="form-control" id="enterTrainNumber" placeholder="1234">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="text" class="form-control" id="enterDestination" placeholder="Los Angeles">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="trainTime">First Train Time
+                                    <span id="trainTimeLabel">(HH:MM | Military)</span>
+                                </label>
+                                <input type="text" class="form-control" id="enterTrainTime" placeholder="22:30">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="frequency">Frequency (mins)</label>
+                                <input type="number" class="form-control" id="enterFrequency" placeholder="60">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                        <!-- END of Form Fill Out -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END of 2 columns section -->
+    </div>
+
+
+
+</body>
+
+</html>

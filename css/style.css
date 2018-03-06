@@ -1,0 +1,31 @@
+body {
+    background-image: url(../images/trainstation.jpg);
+    background-position: center;
+}
+.jumbotron {
+    margin-top: 10px;
+    text-align: center;
+    opacity: .9;
+    border: 1px solid #00547F;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #4CC2FF;
+}
+
+.card {
+    opacity: .9;
+}
+
+.card-header {
+    background-color: #4CC2FF;
+    border: 1px solid #00547F;
+    font-weight: bold;
+}
+
+.card-body {
+    border: 1px solid #00547F;
+}
+
+#trainTimeLabel{
+    font-size: 10px;
+}
