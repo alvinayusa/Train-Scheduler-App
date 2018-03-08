@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -17,7 +19,9 @@
         <div class="jumbotron">
             <h1 class="display-4">Train Scheduler Application</h1>
             <hr class="my-4">
-            <p>Local Time: </p>
+            <p id=localTime>Local Time:
+                <span id=currentTime></span>
+            </p>
         </div>
         <!-- END of Jumbotron | START of 2 column section-->
 
@@ -46,11 +50,11 @@
                             <!-- START of dynamic train table: to be populated dynamically from the table and javascript -->
                             <tbody id="trainTable">
                                 <tr>
-                                    <th scope="row">123</th>
-                                    <td>Los Angeles</td>
-                                    <td>25</td>
-                                    <td>05:35 AM</td>
-                                    <td>10</td>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                             <!-- END of dynamic train table -->
@@ -93,7 +97,7 @@
                                 <input type="number" class="form-control" id="enterFrequency" placeholder="60">
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button id=submitBTN type="submit" class="btn btn-primary">Submit</button>
                         </form>
                         <!-- END of Form Fill Out -->
                     </div>
@@ -104,7 +108,8 @@
     </div>
 
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="javascript/app.js"></script>
 </body>
 
 </html>
